@@ -368,7 +368,7 @@ endfunction
 
 " Create a new note from selection and open it
 function! notoire#create_note(cmd)
-  let note_id = notoire#get_next_note_id()
+  let note_id = strftime('%Y%m%d%H%M%S')
 
   " delete the visual selection and write the empty link in place of
   let save_a = @a
